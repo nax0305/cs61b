@@ -1,9 +1,9 @@
 /** Class that prints the Collatz sequence starting from a given number.
- *  @author YOUR NAME HERE
+ *  @author nax0305
  */
 public class Collatz {
 
-    /** Buggy implementation of nextNumber! */
+    /** nax0305 implementation of nextNumber! */
     public static int nextNumber(int n) {
         if (n  == 128) {
             return 1;
