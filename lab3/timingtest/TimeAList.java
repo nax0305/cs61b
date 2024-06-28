@@ -23,5 +23,54 @@ public class TimeAList {
 
     public static void timeAListConstruction() {
         // TODO: YOUR CODE HERE
+        AList<Integer> ns = new AList<>();
+        AList<Double> times = new AList<>();
+        AList<Integer> opCounts = new AList<>();
+        AList<Integer> timing = new AList<>();
+        Stopwatch sw = new Stopwatch();
+        for (int i = 1; i <= 128000; i++) {
+            timing.addLast(i);
+            if (i == 1000){
+                ns.addLast(1000);
+                opCounts.addLast(1000);
+                times.addLast(sw.elapsedTime());
+            }
+            else if (i == 2000){
+                ns.addLast(2000);
+                opCounts.addLast(2000);
+                times.addLast(sw.elapsedTime());
+            }
+            else if (i == 4000) {
+                ns.addLast(4000);
+                opCounts.addLast(4000);
+                times.addLast(sw.elapsedTime());
+            }
+            else if (i == 8000) {
+                ns.addLast(8000);
+                opCounts.addLast(8000);
+                times.addLast(sw.elapsedTime());
+            }
+            else if (i == 16000) {
+                ns.addLast(16000);
+                opCounts.addLast(16000);
+                times.addLast(sw.elapsedTime());
+            }
+            else if (i == 32000) {
+                ns.addLast(32000);
+                opCounts.addLast(32000);
+                times.addLast(sw.elapsedTime());
+            }
+            else if (i == 64000) {
+                ns.addLast(64000);
+                opCounts.addLast(64000);
+                times.addLast(sw.elapsedTime());
+            }
+            else if (i == 128000) {
+                ns.addLast(128000);
+                opCounts.addLast(128000);
+                times.addLast(sw.elapsedTime());
+            }
+        }
+        printTimingTable(ns, times, opCounts);
     }
 }
