@@ -28,7 +28,7 @@ public class TimeAList {
         AList<Integer> opCounts = new AList<>();
         AList<Integer> timing = new AList<>();
         Stopwatch sw = new Stopwatch();
-        for (int i = 1; i <= 128000; i++) {
+        for (int i = 1; i <= 1280000; i++) {
             timing.addLast(i);
             if (i == 1000){
                 ns.addLast(1000);
@@ -68,6 +68,16 @@ public class TimeAList {
             else if (i == 128000) {
                 ns.addLast(128000);
                 opCounts.addLast(128000);
+                times.addLast(sw.elapsedTime());
+            }
+            else if(i == 500000){
+                ns.addLast(500000);
+                opCounts.addLast(500000);
+                times.addLast(sw.elapsedTime());
+            }
+            else if (i == 1280000){
+                ns.addLast(1280000);
+                opCounts.addLast(1280000);
                 times.addLast(sw.elapsedTime());
             }
         }
